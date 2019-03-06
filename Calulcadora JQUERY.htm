@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Calcuuladora JQUERY</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <h1 id="header">Calculadora JQUERY</h1>
+    <form>
+        <h3>Digite dos N&uacutemeros</h3>
+        <label for="">Numero 1:</label>
+        <input type="text" id="num1">
+        <br><br>
+        <label for="">Numero 2:</label>
+        <input type="text" id="num2">
+        <br><br>
+        <input type="button" id="sumar_button" value="Sumar">
+        <input type="button" id="restar_button" value="Restar">
+        <input type="button" id="multiplicar_button" value="Multiplicar">
+        <input type="button" id="dividir_button" value="Dividir">
+        <h5 id="footer"></h5>
+    </form>
+
+    <script>
+      $('#sumar_button').on('click', function(e) {
+        var n1 = $("#num1").val();
+        var n2 = $("#num2").val();
+        var suma = parseInt(n1) + parseInt(n2);
+        $("#footer").html("El resulado es: " + suma);
+        });
+
+        $('#restar_button').on('click', function (e) {
+            var n1 = $("#num1").val();
+            var n2 = $("#num2").val();
+            var resta = parseInt(n1) - parseInt(n2);
+            $("#footer").html("El resulado es: " + resta);
+        });
+
+        $('#multiplicar_button').on('click', function (e) {
+            var n1 = $("#num1").val();
+            var n2 = $("#num2").val();
+            var multiplicar = parseInt(n1) * parseInt(n2);
+            $("#footer").html("El resulado es: " + multiplicar );
+        });
+
+        $('#dividir_button').on('click', function (e) {
+            var n1 = $("#num1").val();
+            var n2 = $("#num2").val();
+            var dividir = parseInt(n1) / parseInt(n2);
+            $("#footer").html("El resulado es: " + dividir);
+        });
+    </script>
+  </body>
+</html>

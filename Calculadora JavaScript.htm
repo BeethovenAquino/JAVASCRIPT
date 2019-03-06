@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Calculadora</title>
+    </head>
+    <body>
+        <h1 id="header">Calculadora JavaScript</h1>
+        <h3>Digite dos N&uacutemeros</h3>
+        <label for="">Numero 1:</label>
+        <input type="text" id="num1">
+        <br><br>
+        <label for="">Numero 2:</label>
+        <input type="text" id="num2">
+        <br><br>
+        <input type="button" style="border-bottom-color:forestgreen" id="sumar_button" value="Sumar">
+        <input type="button" style="border-bottom-color:red" id="restar_button" value="Restar">
+        <input type="button" style="border-bottom-color:brown" id="multiplicar_buttton" value="Multiplicar">
+        <input type="button" style="border-bottom-color:blue" id="dividir_buttton" value="Dividir">
+      
+        <h5 id="footer"></h5>
+    </body>
+    <script>
+        document.getElementById("sumar_button").onclick = function() {
+            var n1 = document.getElementById('num1').value;
+            var n2 = document.getElementById('num2').value;
+            var suma = parseInt(n1) + parseInt(n2);
+            document.getElementById("footer").innerHTML = "El resultado es: " + suma;    
+        }
+
+        document.getElementById("restar_button").onclick = function () {
+            var n1 = document.getElementById('num1').value;
+            var n2 = document.getElementById('num2').value;
+            var resta = parseInt(n1) - parseInt(n2);
+            document.getElementById("footer").innerHTML = "El resultado es: " + resta;
+        }
+
+        document.getElementById("multiplicar_buttton").onclick = function () {
+            var n1 = document.getElementById('num1').value;
+            var n2 = document.getElementById('num2').value;
+            var multiplicar = parseInt(n1) * parseInt(n2);
+            document.getElementById("footer").innerHTML = "El resultado es: " + multiplicar;
+        }
+        document.getElementById("dividir_buttton").onclick = function () {
+            var n1 = document.getElementById('num1').value;
+            var n2 = document.getElementById('num2').value;
+            var dividir = parseInt(n1) / parseInt(n2);
+            document.getElementById("footer").innerHTML = "El resultado es: " + dividir;
+
+        }
+
+        
+    </script>
+</html>
